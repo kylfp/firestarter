@@ -1,0 +1,23 @@
+{
+  "name": "fat-startpage",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> Fat Startpage </h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylfp/fat-startpage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylfp/fat-startpage/issues"
+  },
+  "homepage": "https://github.com/kylfp/fat-startpage#readme",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

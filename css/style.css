@@ -1,0 +1,30 @@
+#settingsPanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#settingsPanelBtn {
+  width: 2vw;
+  height: 2vw;
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+
+#settingsBtnSvg {
+  width: 2vw;
+  height: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
