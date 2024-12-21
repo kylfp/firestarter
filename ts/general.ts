@@ -1,12 +1,11 @@
 // General Purpose
 function addButtonClickListener(buttonId: string, callback: () => void) : void {
   let button = document.getElementById(buttonId) as HTMLButtonElement | null;
+  console.log(`Assigned Function ${callback}`)
   if (button) {
     button.addEventListener("click", callback);
   }
 }
-addButtonClickListener("settingsBtn", openSettings);
-addButtonClickListener("closeSettingsBtn", closeSettings);
 
 function openSettings(): void {
   let settingsPanel: HTMLDivElement | null = document.getElementById("settingsPanel") as HTMLDivElement | null;
@@ -24,26 +23,6 @@ function closeSettings(): void {
   }
 }
 
-function loadHTMLContent(url: string, containerId: string): void {
-  fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to fetch HTML fom ${url}: ${response.statusText}`);
-      }
-      return response.text();
-    })
-    .then((html) => {
-      let constainer = document.getElementById(containerId);
-      if(constainer) {
-        constainer.innerHTML = html;
-      }
-    })
-    .catch((error) => {
-      console.error("Error loading HTML content:", error);
-      
-    })
-}
-
 async function loadHTMLAsset(url: string, containerId: string): Promise<void> {
   try {
     const response = await fetch(url);
@@ -51,11 +30,18 @@ async function loadHTMLAsset(url: string, containerId: string): Promise<void> {
       throw new Error(`Failed to fetch asset ${response.statusText}`);
     }
     const html = await response.text();
-    const constainer = document.getElementById(containerId);
-    if (constainer) {
-      constainer.innerHTML = html;
+    const container = document.getElementById(containerId);
+    if (container) {
+      container.innerHTML = html;
+      console.log(`Successfully loaded ${url}`)
     }
   } catch (error) {
-    console.error()
+    console.error("Error fetching asset:", error);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadHTMLAsset("./assets/settingsBtnIcon.html", "settingsBtn")
+  addButtonClickListener("settingsBtnIcon", openSettings);
+  addButtonClickListener("closeSettingsBtn", closeSettings);
+})
