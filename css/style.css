@@ -28,3 +28,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.closeBtn {
+  width: 2vw;
+  height: 2vw;
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+
+.closeBtnSvg {
+  width: 2vw;
+  height: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

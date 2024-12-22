@@ -1,23 +1,13 @@
 "use strict";
-// General Purpose
-function addButtonClickListener(buttonId, callback) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.addButtonEventListener = addButtonEventListener;
+exports.loadHTMLAsset = loadHTMLAsset;
+function addButtonEventListener(buttonId, callback) {
     let button = document.getElementById(buttonId);
     console.log(`Button: ${button}`);
     console.log(`Assigned Function ${callback}`);
     if (button) {
         button.addEventListener("click", callback);
-    }
-}
-function openSettings() {
-    let settingsPanel = document.getElementById("settingsPanel");
-    if (settingsPanel) {
-        settingsPanel.style.width = "30vw";
-    }
-}
-function closeSettings() {
-    let settingsPanel = document.getElementById("settingsPanel");
-    if (settingsPanel) {
-        settingsPanel.style.width = "0vw";
     }
 }
 async function loadHTMLAsset(url, containerId) {
@@ -37,9 +27,3 @@ async function loadHTMLAsset(url, containerId) {
         console.error("Error fetching asset:", error);
     }
 }
-document.addEventListener("DOMContentLoaded", () => {
-    loadHTMLAsset("./assets/settingsBtnIcon.html", "settingsBtn");
-    loadHTMLAsset("./assets/closeBtnIcon.html", "closeSettingsBtn");
-    addButtonClickListener("settingsBtn", openSettings);
-    addButtonClickListener("closeSettingsBtn", closeSettings);
-});

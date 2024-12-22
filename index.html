@@ -1,4 +1,3 @@
-
 <html lang="en">
   <head>
     <title>Fat Startpage 3</title>
@@ -11,11 +10,29 @@
     />
   </head>
   <body>
-    <button id="settingsBtn" type="button"></button>
+    <button id="settingsBtn" class="" type="button"></button>
     <div id="settingsPanel" class="">
-      <button id="closeSettingsBtn" type="button">Close Settings</button>
+      <button id="closeSettingsBtn" class="closeBtn" type="button"></button>
       <h3>General</h3>
+      <div id="generalSettings" class="settingsSubDiv">
+        
+      </div>
       <h3>Style</h3>
+        <div id="styleSettings" class="settingsSubDiv">
+          <label for="colorSchemes">Choose a car:</label>
+          <select class="settingsDropdown" name="colorSchemes">
+            <option value="tn-mon">Tokyo Night - Moon</option>
+            <option value="tn-stm">Tokyo Night - Storm</option>
+            <option value="tn-nit">Tokyo Night - Night</option>
+            <option value="tn-day">Tokyo Night - Day</option>
+            <option value="od">OneDark</option>
+            <option value="ctpn-lat">Catppucin - Latte</option>
+            <option value="ctpn-frp">Catppucin - Frappe</option>
+            <option value="ctpn-mac">Catppucin - Macchiato</option>
+            <option value="ctpn-moc">Catppucin - Mocha</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
       <h3>Bookmarks</h3>
       <h3>Time</h3>
       <h3>Search</h3>
