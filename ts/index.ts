@@ -1,4 +1,3 @@
-// General Purpose
 import { addButtonEventListener, loadHTMLAsset} from "./util"
 
 function openSettings(): void {
