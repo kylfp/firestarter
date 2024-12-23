@@ -7,7 +7,6 @@ function addButtonEventListener(buttonId: string, callback: () => void) : void {
   }
 }
 
-
 async function loadHTMLAsset(url: string, containerId: string): Promise<void> {
   try {
     const response = await fetch(url);

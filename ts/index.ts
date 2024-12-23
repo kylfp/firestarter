@@ -19,7 +19,6 @@ function closeSettings(): void {
 document.addEventListener("DOMContentLoaded", () => {
   loadHTMLAsset("./assets/settingsBtnIcon.html", "settingsBtn")
   loadHTMLAsset("./assets/closeBtnIcon.html", "closeSettingsBtn")
-  loadHTMLAsset("./assets")
   addButtonEventListener("settingsBtn", openSettings);
   addButtonEventListener("closeSettingsBtn", closeSettings);
 })
